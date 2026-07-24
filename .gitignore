@@ -1,0 +1,6 @@
+
+# Backend Java/Maven
+deporvida/target/
+deporvida/.idea/
+deporvida/*.iml
+deporvida/.mvn/wrapper/maven-wrapper.jar

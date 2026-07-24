@@ -1,0 +1,830 @@
+/* ============================================
+   Crisol Layout Styles - Inspired by crisol.com.pe
+   All new classes prefixed with .crisol- to avoid conflicts
+   ============================================ */
+
+/* --- Visually hidden helper --- */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* --- Header / Navbar --- */
+.crisol-header {
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.crisol-header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 40px;
+  background: #fff;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 24px;
+}
+
+.crisol-logo {
+  flex-shrink: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a2e;
+  text-decoration: none;
+}
+
+.crisol-logo span {
+  color: #19b3d3;
+}
+
+/* Search Bar */
+.crisol-search-bar {
+  flex: 1;
+  max-width: 560px;
+  position: relative;
+}
+
+.crisol-search-input {
+  width: 100%;
+  padding: 12px 20px;
+  padding-right: 48px;
+  border: 2px solid #e5e5e5;
+  border-radius: 50px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background: #fafafa;
+}
+
+.crisol-search-input:focus {
+  border-color: #19b3d3;
+  box-shadow: 0 0 0 3px rgba(25, 179, 211, 0.15);
+  background: #fff;
+}
+
+.crisol-search-btn {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.crisol-search-btn:hover {
+  color: #19b3d3;
+}
+
+/* Header Actions */
+.crisol-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.crisol-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #f5f5f5;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  font-size: 20px;
+  position: relative;
+  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+}
+
+.crisol-icon-btn:hover {
+  background: #e8e8e8;
+  color: #19b3d3;
+}
+
+.crisol-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background: #FF5370;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 5px;
+  border-radius: 10px;
+  min-width: 16px;
+  text-align: center;
+  line-height: 1;
+}
+
+/* Cart link specific */
+.crisol-cart-link {
+  width: auto;
+  padding: 0 12px 0 0;
+  background: transparent;
+  color: #333;
+  font-weight: 600;
+  font-size: 14px;
+  gap: 6px;
+}
+
+.crisol-cart-icon {
+  font-size: 22px;
+}
+
+.crisol-cart-badge {
+  background: #FF5370;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 10px;
+  min-width: 18px;
+  text-align: center;
+}
+
+/* Nav Bar */
+.crisol-nav-bar {
+  background: #fafafa;
+  border-top: 1px solid #e5e5e5;
+}
+
+.crisol-nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.crisol-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.crisol-nav-item {
+  position: relative;
+}
+
+.crisol-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 18px;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s, background 0.2s;
+  border-radius: 4px;
+  margin: 4px 2px;
+  white-space: nowrap;
+}
+
+.crisol-nav-link:hover {
+  color: #19b3d3;
+  background: #f0f0f0;
+}
+
+.crisol-chevron {
+  font-size: 10px;
+  transition: transform 0.2s;
+  color: #888;
+}
+
+.crisol-nav-item:hover .crisol-chevron {
+  transform: rotate(180deg);
+}
+
+/* Mega Menu */
+.crisol-mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 700px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  display: none;
+  z-index: 100;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.crisol-nav-item:hover .crisol-mega-menu {
+  display: flex;
+}
+
+.crisol-mega-content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.crisol-mega-column {
+  flex: 1;
+  min-width: 180px;
+}
+
+.crisol-mega-title {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #888;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.crisol-mega-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.crisol-mega-list li {
+  margin-bottom: 8px;
+}
+
+.crisol-mega-list a {
+  color: #555;
+  font-size: 13px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.crisol-mega-list a:hover {
+  color: #19b3d3;
+}
+
+/* ============================================
+   MAIN CONTENT
+   ============================================ */
+
+.crisol-main {
+  padding-top: 140px; /* Account for fixed header */
+}
+
+/* --- Hero Section --- */
+.crisol-hero {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.crisol-hero-slide {
+  position: relative;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 0 40px;
+}
+
+.crisol-hero-content {
+  text-align: center;
+  color: #fff;
+  max-width: 700px;
+  padding: 0 24px;
+  z-index: 2;
+}
+
+.crisol-hero-title {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.crisol-hero-subtitle {
+  font-size: 20px;
+  font-weight: 400;
+  opacity: 0.95;
+  margin-bottom: 28px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.crisol-hero-cta {
+  font-size: 16px;
+  padding: 16px 40px;
+  font-weight: 600;
+}
+
+.crisol-hero-dots {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 3;
+}
+
+.crisol-hero-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.crisol-hero-dot:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.crisol-hero-dot.active {
+  background: #fff;
+  transform: scale(1.2);
+}
+
+.crisol-hero-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  z-index: 3;
+}
+
+.crisol-hero-arrow:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.crisol-hero-arrow.prev {
+  left: 24px;
+}
+
+.crisol-hero-arrow.next {
+  right: 24px;
+}
+
+/* --- Banner Row --- */
+.crisol-banner-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 0 40px 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.crisol-banner {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f8f9fa;
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+}
+
+.crisol-banner:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.crisol-banner-content {
+  color: #333;
+}
+
+.crisol-banner-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 12px 0 6px;
+}
+
+.crisol-banner-subtitle {
+  font-size: 13px;
+  color: #888;
+}
+
+/* --- Carousel Section --- */
+.crisol-carousel-section {
+  padding: 0 40px 32px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.crisol-carousel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.crisol-section-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #19b3d3;
+}
+
+.crisol-see-more {
+  background: none;
+  border: none;
+  color: #19b3d3;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 0;
+  transition: color 0.2s;
+}
+
+.crisol-see-more:hover {
+  color: #0B87A6;
+  text-decoration: underline;
+}
+
+.crisol-carousel {
+  overflow-x: auto;
+  padding-bottom: 16px;
+  scrollbar-width: thin;
+  scrollbar-color: #ddd transparent;
+}
+
+.crisol-carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.crisol-carousel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.crisol-carousel::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 4px;
+}
+
+.crisol-carousel::-webkit-scrollbar-thumb:hover {
+  background: #ccc;
+}
+
+.crisol-carousel-track {
+  display: flex;
+  gap: 16px;
+  min-width: max-content;
+  padding: 4px 4px 12px;
+}
+
+.crisol-carousel-item {
+  flex: 0 0 220px;
+}
+
+/* --- Category Section --- */
+.crisol-category-section {
+  padding: 24px 40px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.crisol-category-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0 0 24px;
+  text-align: center;
+}
+
+.crisol-category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 16px;
+}
+
+.crisol-category-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  padding: 20px 12px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.crisol-category-circle:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  color: #19b3d3;
+}
+
+.crisol-category-icon {
+  font-size: 36px;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.crisol-category-name {
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+/* --- Book Card Compact --- */
+.book-card-compact {
+  width: 220px;
+  flex-shrink: 0;
+}
+
+.book-card-compact .book-cover {
+  font-size: 48px;
+  min-height: 70px;
+}
+
+.book-card-compact h3 {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.book-card-compact .book-author {
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+
+.book-card-compact .book-category {
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+
+.book-card-compact .book-price {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.book-card-compact .crisol-favorite-btn {
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+}
+
+/* --- Favorite Button --- */
+.crisol-favorite-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+  z-index: 2;
+}
+
+.crisol-favorite-btn:hover {
+  background: #fff;
+  color: #FF5370;
+  transform: scale(1.1);
+}
+
+.crisol-favorite-btn.active {
+  color: #FF5370;
+}
+
+.crisol-favorite-btn.active:hover {
+  color: #ff2d5a;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .crisol-header-top,
+  .crisol-nav-container,
+  .crisol-hero-slide,
+  .crisol-banner-row,
+  .crisol-carousel-section,
+  .crisol-category-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .crisol-hero-title {
+    font-size: 36px;
+  }
+
+  .crisol-banner-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .crisol-mega-menu {
+    left: -100px;
+    min-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .crisol-header-top {
+    padding: 10px 16px;
+    gap: 12px;
+  }
+
+  .crisol-logo {
+    font-size: 20px;
+  }
+
+  .crisol-search-bar {
+    order: 3;
+    flex: 1 1 100%;
+    max-width: none;
+    margin-top: 10px;
+  }
+
+  .crisol-header-top {
+    flex-wrap: wrap;
+  }
+
+  .crisol-nav-container {
+    padding: 0 16px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .crisol-nav-list {
+    flex-wrap: nowrap;
+    padding-bottom: 8px;
+  }
+
+  .crisol-nav-link {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+
+  .crisol-mega-menu {
+    display: none !important; /* Disable mega menu on mobile */
+  }
+
+  .crisol-hero-slide {
+    margin: 0 16px;
+    min-height: 300px;
+    border-radius: 12px;
+  }
+
+  .crisol-hero-title {
+    font-size: 28px;
+  }
+
+  .crisol-hero-subtitle {
+    font-size: 16px;
+  }
+
+  .crisol-hero-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .crisol-hero-arrow.prev {
+    left: 12px;
+  }
+
+  .crisol-hero-arrow.next {
+    right: 12px;
+  }
+
+  .crisol-banner-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 0 16px 20px;
+  }
+
+  .crisol-carousel-section {
+    padding: 0 16px 24px;
+  }
+
+  .crisol-section-title {
+    font-size: 18px;
+  }
+
+  .crisol-carousel-item {
+    flex: 0 0 180px;
+  }
+
+  .book-card-compact {
+    width: 180px;
+  }
+
+  .crisol-category-section {
+    padding: 16px 16px 32px;
+  }
+
+  .crisol-category-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  .crisol-category-icon {
+    font-size: 28px;
+  }
+
+  .crisol-category-name {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .crisol-category-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ============================================
+   PRINT
+   ============================================ */
+@media print {
+  .crisol-header,
+  .crisol-hero-arrow,
+  .crisol-hero-dots,
+  .crisol-see-more,
+  .crisol-favorite-btn {
+    display: none !important;
+  }
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.crisol-footer { background: #1a1a2e; color: #fff; padding: 50px 5% 0; }
+.crisol-footer-top { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 40px; max-width: 1200px; margin: 0 auto; padding-bottom: 40px; }
+.crisol-footer-brand-logo { font-size: 26px; font-weight: 800; color: #fff; text-decoration: none; display: inline-block; margin-bottom: 4px; }
+.crisol-footer-brand-logo span { color: #FFB64D; }
+.crisol-footer-tagline { font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #FFB64D; margin-bottom: 20px; }
+.crisol-footer-label { font-size: 13px; font-weight: 600; color: #cfd8e3; margin-bottom: 12px; }
+.crisol-footer-social { display: flex; gap: 10px; margin-bottom: 24px; }
+.crisol-footer-social a { width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; overflow: hidden; transition: background 0.2s; }
+.crisol-footer-social a:hover { background: #19b3d3; }
+.crisol-footer-social img { width: 18px; height: 18px; object-fit: contain; }
+.crisol-payment-icons { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.crisol-payment-badge { background: #fff; border-radius: 4px; width: 48px; height: 30px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.crisol-payment-badge img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.crisol-reclamos-link { display: inline-flex; align-items: center; gap: 10px; background: #fff; border-radius: 6px; padding: 10px 14px; text-decoration: none; color: #19b3d3; font-size: 12px; font-weight: 700; line-height: 1.3; max-width: 180px; }
+.crisol-reclamos-link img { width: 28px; height: 28px; object-fit: contain; flex-shrink: 0; }
+.crisol-footer-col h4 { font-size: 15px; font-weight: 700; margin-bottom: 16px; color: #fff; }
+.crisol-footer-col + .crisol-footer-col { margin-top: 28px; }
+.crisol-footer-col a, .crisol-footer-col span.crisol-footer-static { display: block; color: #cfd8e3; text-decoration: none; font-size: 14px; margin-bottom: 10px; background: none; border: none; padding: 0; text-align: left; cursor: pointer; }
+.crisol-footer-col a:hover { color: #FFB64D; }
+.crisol-footer-bottom { border-top: 1px solid rgba(255,255,255,0.12); padding: 18px 0; text-align: center; font-size: 13px; color: #9aa5b8; }
+@media (max-width: 900px) { .crisol-footer-top { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .crisol-footer-top { grid-template-columns: 1fr; gap: 30px; } }

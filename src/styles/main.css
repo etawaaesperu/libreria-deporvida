@@ -1,0 +1,778 @@
+/* ============================================
+   Deporvida - School Management System Styles
+   ============================================ */
+
+/* --- Reset & Base --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --- Navbar --- */
+.navbar {
+  background: #22242a;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.navbar-brand span {
+  color: #19b3d3;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-links a {
+  color: #ccc;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #19b3d3;
+}
+
+.navbar-cart {
+  position: relative;
+  color: #FFB64D !important;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-cart:hover {
+  color: #fff !important;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  background: #FF5370;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 10px;
+  min-width: 18px;
+  text-align: center;
+}
+
+/* --- Hero / Jumbotron --- */
+.hero {
+  margin-top: 70px;
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 60px;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #ccc;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #19b3d3, 0 0 20px #19b3d3; }
+  to   { text-shadow: 0 0 20px #ff4da6, 0 0 40px #ff4da6, 0 0 60px #ff4da6; }
+}
+
+/* --- Buttons --- */
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.3s, background 0.3s;
+  color: #fff;
+  background: #19b3d3;
+  text-align: center;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn-primary { background: #19b3d3; }
+.btn-success { background: #2ed8b6; }
+.btn-warning { background: #FFB64D; }
+.btn-danger  { background: #FF5370; }
+.btn-blue    { background: linear-gradient(45deg, #4099ff, #73b4ff); }
+.btn-green   { background: linear-gradient(45deg, #2ed8b6, #59e0c5); }
+.btn-yellow  { background: linear-gradient(45deg, #FFB64D, #ffcb80); }
+.btn-pink    { background: linear-gradient(45deg, #FF5370, #ff869a); }
+
+.btn-sm {
+  padding: 6px 15px;
+  font-size: 13px;
+}
+
+/* --- Cards Grid (Home) --- */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 40px 5%;
+}
+
+.role-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 30px;
+  transition: transform 0.3s;
+}
+
+.role-card:hover {
+  transform: translateY(-5px);
+}
+
+.role-card .icon {
+  font-size: 80px;
+  margin-bottom: 15px;
+}
+
+.role-card h3 {
+  color: #555;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.role-card .btn {
+  width: 100%;
+}
+
+/* --- Book Cards --- */
+.book-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 25px 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.book-cover {
+  font-size: 60px;
+  margin-bottom: 15px;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-card h3 {
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 8px;
+  line-height: 1.3;
+  flex-grow: 1;
+}
+
+.book-author {
+  color: #888;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.book-category {
+  color: #19b3d3;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.book-price {
+  color: #2ed8b6;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.book-stock {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.book-card .btn {
+  width: 100%;
+  margin-top: auto;
+}
+
+/* --- Cart Styles --- */
+.cart-link {
+  position: relative;
+  color: #FFB64D !important;
+  font-weight: 600;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  background: #FF5370;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 10px;
+  min-width: 18px;
+  text-align: center;
+}
+
+/* --- Dashboard Cards --- */
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  padding: 20px 30px;
+}
+
+.dash-card {
+  color: #fff;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+}
+
+.dash-card:hover {
+  transform: translateY(-3px);
+}
+
+.dash-card h6 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.dash-card h2 {
+  font-size: 28px;
+  text-align: right;
+}
+
+.dash-card h2 .icon-left {
+  float: left;
+  font-size: 24px;
+}
+
+.dash-card .sub-info {
+  font-size: 13px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bg-blue   { background: linear-gradient(45deg, #4099ff, #73b4ff); }
+.bg-green  { background: linear-gradient(45deg, #2ed8b6, #59e0c5); }
+.bg-yellow { background: linear-gradient(45deg, #FFB64D, #ffcb80); }
+.bg-pink   { background: linear-gradient(45deg, #FF5370, #ff869a); }
+
+/* --- Dashboard Action Cards --- */
+.action-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  padding: 20px 30px;
+}
+
+/* --- Sidebar Layout (for dashboard pages) --- */
+.layout {
+  display: flex;
+  margin-top: 65px;
+  min-height: calc(100vh - 65px);
+}
+
+.sidebar {
+  width: 250px;
+  background: #2f323a;
+  min-height: 100%;
+  position: fixed;
+  top: 65px;
+  left: 0;
+  padding-top: 30px;
+  transition: width 0.3s;
+  overflow-y: auto;
+}
+
+.sidebar .profile {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #444;
+  margin-bottom: 10px;
+}
+
+.sidebar .profile .avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #19b3d3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  font-size: 36px;
+  color: #fff;
+}
+
+.sidebar .profile h4 {
+  color: #ccc;
+  font-size: 16px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 15px 40px;
+  color: #fff;
+  font-size: 15px;
+  transition: background 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background: #19b3d3;
+}
+
+.main-content {
+  margin-left: 250px;
+  flex: 1;
+  padding: 30px;
+  transition: margin-left 0.3s;
+}
+
+/* --- Logout Button (header right) --- */
+.logout-btn {
+  background: #19b3d3;
+  color: #fff;
+  padding: 6px 20px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #0B87A6;
+}
+
+/* --- Forms --- */
+.form-container {
+  max-width: 700px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.form-header {
+  background: linear-gradient(135deg, #0072ff, #8811c5);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.form-body {
+  padding: 30px 40px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #555;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ced4da;
+  border-radius: 20px;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #19b3d3;
+}
+
+.form-group textarea {
+  border-radius: 10px;
+  resize: vertical;
+}
+
+.form-actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.form-footer {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #666;
+}
+
+.form-footer a {
+  color: #19b3d3;
+  font-weight: 600;
+}
+
+/* --- Tables --- */
+.table-container {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.table-header {
+  background: #19b3d3;
+  color: #fff;
+  padding: 15px 25px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th {
+  background: #f8f9fa;
+  padding: 12px 20px;
+  text-align: left;
+  font-size: 14px;
+  color: #555;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.data-table td {
+  padding: 12px 20px;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.data-table tr:hover {
+  background: #f8f9fa;
+}
+
+.data-table .btn-sm {
+  margin-right: 5px;
+}
+
+/* --- Attendance Grid --- */
+.attendance-table td select {
+  padding: 6px 12px;
+  border-radius: 15px;
+  border: 1px solid #ced4da;
+  font-size: 13px;
+}
+
+/* --- Notice Board --- */
+.notice-section {
+  margin-top: 30px;
+}
+
+.notice-board-title {
+  background: #19b3d3;
+  color: #fff;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.notice-item {
+  background: #f44336;
+  color: #fff;
+  padding: 15px 25px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.notice-item strong {
+  font-size: 14px;
+}
+
+.notice-item p {
+  margin-top: 8px;
+  font-size: 15px;
+}
+
+.notice-close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 22px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+/* --- Section Titles --- */
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #19b3d3;
+}
+
+/* --- Login/Signup Page --- */
+.auth-page {
+  background: #b6bde7;
+  min-height: 100vh;
+  padding-top: 100px;
+}
+
+/* --- Class Selection Grid --- */
+.class-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 20px 30px;
+}
+
+.class-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.class-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.class-card h3 {
+  color: #19b3d3;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.class-card p {
+  color: #888;
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+/* --- Wait for Approval --- */
+.wait-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 130px);
+  text-align: center;
+}
+
+.wait-page .icon {
+  font-size: 80px;
+  color: #FFB64D;
+  margin-bottom: 20px;
+}
+
+.wait-page h2 {
+  font-size: 28px;
+  color: #333;
+}
+
+.wait-page p {
+  color: #777;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* --- Footer --- */
+.footer {
+  background: #1a1a2e;
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 40px;
+}
+
+.footer .social-icons a {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin: 0 8px;
+  font-size: 20px;
+  line-height: 45px;
+  color: #fff;
+  transition: opacity 0.3s;
+}
+
+.footer .social-icons a:hover {
+  opacity: 0.7;
+}
+
+.footer .social-icons .fa-facebook  { background: #3B5998; }
+.footer .social-icons .fa-whatsapp  { background: #25d366; }
+.footer .social-icons .fa-twitter   { background: #55ACEE; }
+.footer .social-icons .fa-instagram { background: #125688; }
+
+.footer p {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* --- Visibility Helpers --- */
+.hidden { display: none !important; }
+
+/* --- About Us --- */
+.about-page {
+  margin-top: 100px;
+  text-align: center;
+  padding: 40px 10%;
+}
+
+.about-page h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.about-page p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .navbar-links { display: none; }
+  .hero h1 { font-size: 36px; }
+  .sidebar { width: 60px; }
+  .sidebar a span { display: none; }
+  .sidebar a { padding: 15px 20px; text-align: center; }
+  .main-content { margin-left: 60px; }
+  .form-row { grid-template-columns: 1fr; }
+  .cards-grid { grid-template-columns: 1fr; }
+  .dashboard-cards { grid-template-columns: 1fr 1fr; }
+}
+
+/* --- Sidebar Home Link --- */
+.sidebar-home-link {
+  display: block;
+  padding: 12px 25px;
+  color: #FFB64D;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid #444;
+  margin-bottom: 5px;
+  transition: background 0.3s;
+}
+.sidebar-home-link:hover {
+  background: #19b3d3;
+  color: #fff;
+}
+
+/* --- Avatar Tooltip --- */
+.avatar { position: relative; cursor: pointer; }
+.avatar-tooltip {
+  position: absolute; top: -10px; right: -200px; background: white;
+  border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); padding: 10px;
+  z-index: 1000; opacity: 0; transition: opacity 0.3s; min-width: 180px;
+  border: 1px solid #e0e0e0;
+  pointer-events: none;
+}
+.avatar:hover .avatar-tooltip { opacity: 1; pointer-events: auto; }
+.tooltip-arrow {
+  position: absolute; top: 15px; right: -10px; width: 0; height: 0;
+  border-left: 10px solid white; border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+.tooltip-content { display: flex; flex-direction: column; gap: 5px; }
+.tooltip-btn {
+  background: none; border: none; text-align: left; padding: 8px 12px;
+  cursor: pointer; border-radius: 4px; font-size: 14px; color: #333;
+  display: flex; align-items: center; gap: 8px; width: 100%;
+}
+.tooltip-btn:hover { background: #f0f0f0; }
+
+/* --- Scope styles to Deporvida component --- */
+.deporvida-root {
+  /* All styles are scoped here if needed */
+}

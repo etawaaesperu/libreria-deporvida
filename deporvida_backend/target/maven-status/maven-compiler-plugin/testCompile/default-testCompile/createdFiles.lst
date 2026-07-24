@@ -1,0 +1,8 @@
+com\deporvida\integration\SecurityConfigTest.class
+com\deporvida\integration\SwaggerSmokeTest.class
+com\deporvida\repository\PedidoRepositoryTest.class
+com\deporvida\service\impl\PedidoServiceImplTest.class
+com\deporvida\repository\UsuarioRepositoryTest.class
+com\deporvida\service\impl\CarritoServiceImplTest.class
+com\deporvida\service\impl\AutenticacionServiceImplTest.class
+com\deporvida\integration\PedidoFlowIntegrationTest.class
